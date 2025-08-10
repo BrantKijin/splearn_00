@@ -8,7 +8,6 @@ import org.springframework.util.Assert;
 import kr.study.splearn_00.shared.Email;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
-import lombok.NoArgsConstructor;
 
 @Getter
 
@@ -40,7 +39,7 @@ public class Member {
 	// public static Member create(String email, String ninckname, String password, PasswordEncoder passwordEncoder) {
 	// 	return new Member(email, ninckname, passwordEncoder.encode(password));
 	// }
-	public static Member create(MemberCreateRequest createRequest, PasswordEncoder passwordEncoder) {
+	public static Member register(MemberRegisterRequest createRequest, PasswordEncoder passwordEncoder) {
 		Member member = new Member();
 
 		Pattern EMAIL_PATTERN =

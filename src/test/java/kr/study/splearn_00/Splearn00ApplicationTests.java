@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import kr.study.splearn_00.domain.Member;
-import kr.study.splearn_00.domain.MemberCreateRequest;
+import kr.study.splearn_00.domain.MemberRegisterRequest;
 import kr.study.splearn_00.domain.MemberStatus;
 import kr.study.splearn_00.domain.PasswordEncoder;
 
@@ -29,8 +29,8 @@ class Splearn00ApplicationTests {
 				return encode(password).equals(passwordEncoder);
 			}
 		};
-		MemberCreateRequest createRequest = new MemberCreateRequest("aa","bb","cc");
-		member = Member.create(createRequest, passwordEncoder
+		MemberRegisterRequest createRequest = new MemberRegisterRequest("aa","bb","cc");
+		member = Member.register(createRequest, passwordEncoder
 		);
 	}
 
