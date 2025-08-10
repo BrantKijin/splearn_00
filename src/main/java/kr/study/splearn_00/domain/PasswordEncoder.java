@@ -1,0 +1,7 @@
+package kr.study.splearn_00.domain;
+
+public interface PasswordEncoder {
+
+	String encode(String password);
+	boolean matches(String password, String encodedPassword);
+}
